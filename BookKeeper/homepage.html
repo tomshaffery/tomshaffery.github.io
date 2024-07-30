@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Books API -->
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+
+    <title>Homepage</title>
+</head>
+<body onload="getRecommendedBooks()">
+    <!-- Background image -->
+    <div class="bg-image"></div>
+    <!-- Background image -->
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm fixed-top mask-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href='homepage.html'>BookKeeper</a>
+        </div>
+
+        <!-- Links -->
+        <div class="container-fluid justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="nav-link" onclick="window.location.href='bookshelf.html'">Book Shelf</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" onclick="signOut()" class="nav-link">Sign Out</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="input-group mb-3 shadow" data-bs-theme="light" id="search-form">
+        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" id="search-select" aria-expanded="false"><i class="bi bi-list"></i></button>
+        <ul class="dropdown-menu" id="select-menu">
+            <li><button class="dropdown-item" onclick="searchSelect(this, 'intitle')">Title</button></li>
+            <li><button class="dropdown-item" onclick="searchSelect(this, 'inauthor')">Author</button></li>
+            <li><button class="dropdown-item" onclick="searchSelect(this, 'subject')">Genre</button></li>
+            <li><button class="dropdown-item" onclick="searchSelect(this, 'isbn')">ISBN</button></li>
+            <li><button class="dropdown-item" onclick="searchSelect(this, 'inpublisher')">Publisher</button></li>
+        </ul>
+        <input type="text" class="form-control" id="searchInput" aria-label="Text input with dropdown button">
+        <button class="btn btn-light" type="button" id="searchButton" onclick="searchBooks()"><i class="bi bi-search"></i></button>
+    </div>
+
+    <div id="recommendations"></div>
+    <div id="search-results"></div>
+    
+    <!-- Modal for displaying book details -->
+    <div class="modal fade" id="bookDetailsModal" tabindex="-1" aria-labelledby="bookDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookDetailsModalLabel">Book Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="bookDetailsBody">
+                    <!-- Book details will be populated here -->
+                    <div id="viewerCanvas" style="width: 100%; height: 500px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

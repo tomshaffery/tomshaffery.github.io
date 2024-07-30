@@ -1,0 +1,137 @@
+
+
+
+html {
+    background: url(book_wallpaper.png) no-repeat center fixed;
+    background-size: cover;
+  }
+
+.mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(46, 37, 83, 0.267);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 6.25em;
+    padding-left: .5vw;
+}
+
+.navbar-nav li {
+    padding-right: 2vw;
+}
+
+.search-container {
+    position: relative;
+    z-index: 1;
+}
+
+#welcome {
+    font: 'Poppins';
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translate(-10%, -10%);
+}
+
+#welcome span {
+    position: relative;
+    right: 8vw;
+    font-size: 5em;
+}
+
+#welcome button {
+    width: 130px;
+    margin-top: 1vh;
+}
+
+#login-content {
+    background-image: url('login_bg.jpg');
+}
+
+.modal-body {
+    backdrop-filter: blur(5px);
+    background-color: rgba(46, 37, 83, 0.267);
+}
+
+.modal-body h3 {
+    margin: 0 auto;
+}
+
+#login-close {
+    position: fixed;
+    left: 92%;
+}
+
+.modal-content #email {
+    margin-top: 2vh;
+}
+
+#login-login {
+    backdrop-filter: blur(5px);
+    background-color: rgba(87, 76, 130, 0.267);
+}
+
+#register-content {
+    background-image: url('signup_bg.jpg');
+}
+
+#signup-signup {
+    backdrop-filter: blur(5px);
+    background-color: rgba(62, 129, 142, 0.267);
+}
+
+#carousel-container {
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    height: 40vh;
+    width: 33vw;
+    align-content: space-around;
+}
+
+.carousel-caption {
+    border-radius: 5px;
+    height: auto;
+}
+
+.carousel-caption p {
+    color: #f8f9fa;
+    padding-bottom: 5px;
+}
+
+.carousel-caption h5 {
+    color: #f8f9fa;
+}
+
+#recommendations {
+    position: fixed;
+    margin-bottom: 5vh;
+    left: 31vw;
+    top: 15vh;
+}
+
+#recommendations span {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#search-form {
+    width: 40vw;
+    position: fixed;
+    top: 10vh;
+    left: 30vw;
+    z-index: 1;
+}
+
+#content-panel {
+    position: fixed;
+    top: 20vh;
+    left: 30vw;
+}
+
+#emptyDisplay {
+    position: fixed;
+    top: 15vh;
+    left: 40vw;
+}
