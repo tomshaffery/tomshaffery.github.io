@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="#">BookKeeper</a>
         </div>
     </nav>
-    <div class="container-xxl" id="welcome">
+    <div class="container-lg bg-transparent" id="welcome">
         <span>BookKeeper <i class="bi bi-book-fill"></i></span>
         <br>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login-modal">Login</button>
@@ -28,7 +28,7 @@
         <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#register-modal">Sign Up</button>
     </div>
     <div class="modal fade" id="login-modal">
-        <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-dialog modal-dialog-centered modal-md bg-transparent">
             <div class="modal-content" id="login-content">
                 <div class="modal-body">
                     <button type="button" class="btn-close" id="login-close" data-bs-dismiss="modal"></button>
@@ -65,11 +65,11 @@
             </div>
         </div>
     </div>
-    <div id="carousel-container" class="container-fluid">
+    <div id="carousel-container" class="container-lg">
         <div id="index-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="book_car_signup.png" class="d-block w-100" alt="...">
+                <img src="book_car_signup.png" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block mask-custom">
                   <h5>Create Your Account</h5>
                   <p>Creating your account has never been easier.</p>
@@ -96,8 +96,41 @@
                   <p>Save your favorites whenever you want and view them on your bookshelf.</p>
                 </div>
               </div>
-            </div>
+        </div>
+      </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="creditModal" tabindex="-1" aria-labelledby="creditModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="creditModalLabel">BookKeeper - Credits</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This application was developed in the Computing & Informatics Capstone course at Rowan University, Summer 2024.</p>
+      <p>Developed by: Alexand Sukach, Tom Shaffery, Nick Cagnassola, Oscar Hernandez, Samuel Onuoha.</p>
+
+      <p>Artwork:</p>
+
+      <p>purple and blue abstract painting by Pawel Czerwinski (@pawel_czerwinski). https://unsplash.com/photos/purple-and-blue-abstract-painting-vBc7xy65us8</p>
+
+      <p>mermaid scales by Alexander Grey. https://unsplash.com/photos/close-up-photo-of-bokeh-lights-igBvG1AKTY8</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+</div>
+    <footer class="text-center text-lg-start mask-custom" id="foot">
+    <div class="container-fluid py-3 justify-content-center">
+      <h4>BookKeeper<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#creditModal">
+        <i class="bi bi-info-square-fill"></i>
+      </button></h4>
+    </div>
+  </footer>
 </body>
 <script src="script.js"></script>
 </html>
